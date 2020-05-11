@@ -394,12 +394,9 @@ body {
 
 .phone {
   color: #E3B873;
-  text-decoration: none; }
-  .phone::after {
-    content: '';
-    border: 1px solid #E3B873;
-    width: 120px;
-    display: flex; }
+  text-decoration: none;
+  border-bottom: 1px solid #E3B873;
+  width: 120px; }
 
 .contacts__phone {
   margin-right: 45px; }
