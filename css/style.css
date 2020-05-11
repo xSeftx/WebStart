@@ -442,7 +442,8 @@ body {
     background-color: #131313;
     text-transform: uppercase;
     text-decoration: none;
-    color: #fff; }
+    color: #fff;
+    font-family: 'Yeseva One', cursive; }
     .hero__scroll-down::after {
       content: '';
       background: url("../img/arrow-down.svg") no-repeat center;
