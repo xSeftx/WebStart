@@ -27,6 +27,14 @@
             color: $primary
 .phone
     color: $primary
+    text-decoration: none
+    &::after
+        content: ''
+        border: 1px solid $primary
+        width: 120px
+        display: flex
+
+
 .contacts
     &__phone
        margin-right: 45px 

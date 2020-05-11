@@ -393,7 +393,13 @@ body {
     color: #E3B873; }
 
 .phone {
-  color: #E3B873; }
+  color: #E3B873;
+  text-decoration: none; }
+  .phone::after {
+    content: '';
+    border: 1px solid #E3B873;
+    width: 120px;
+    display: flex; }
 
 .contacts__phone {
   margin-right: 45px; }
@@ -423,7 +429,9 @@ body {
     font-size: 22px;
     max-width: 500px; }
   .hero__button {
-    margin-right: 20px; }
+    margin-right: 20px;
+    min-width: 207px;
+    height: 51px; }
   .hero__instagram {
     position: absolute;
     left: 0;
