@@ -431,14 +431,12 @@ body {
     position: relative;
     max-width: 47.85rem;
     margin-left: 4.28rem; }
-  .hero__title {
-    margin-bottom: 1rem; }
   .hero__text {
     font-size: 1.57rem;
     line-height: 131%;
-    margin: 0;
     max-width: 500px; }
   .hero__button {
+    margin-top: 1.8rem;
     margin-right: 20px;
     min-width: 207px;
     min-height: 51px; }
