@@ -503,9 +503,13 @@ body {
 
 @media screen and (max-width: 1200px) {
   html {
-    font-size: 12px; }
+    font-size: 0.7rem; }
   .nav__item {
     margin-right: 1rem; } }
+
+@media screen and (min-width: 1200px) {
+  html {
+    font-size: 0.75rem; } }
 
 @media screen and (max-width: 992px) {
   .nav {
@@ -539,3 +543,7 @@ body {
 @media screen and (max-height: 550px) {
   .hero__scroll-down {
     display: none; } }
+
+@media screen and (max-width: 370px) {
+  .logo__link {
+    font-size: 0.8rem; } }
