@@ -566,15 +566,19 @@ img {
   line-height: 27px;
   margin-bottom: 2.85rem; }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1330px) {
+  html {
+    font-size: 0.8rem; } }
+
+@media screen and (max-width: 1215px) {
   html {
     font-size: 0.7rem; }
+  .logo__link {
+    margin-right: 0.5rem; } }
+
+@media screen and (max-width: 1200px) {
   .nav__item {
     margin-right: 1rem; } }
-
-@media screen and (min-width: 1200px) {
-  html {
-    font-size: 0.75rem; } }
 
 @media screen and (max-width: 992px) {
   .nav {
