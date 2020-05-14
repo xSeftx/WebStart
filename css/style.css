@@ -599,7 +599,8 @@ img {
   .card__text {
     margin-left: 0; }
   .design__paragraph {
-    font-size: 1.5rem; }
+    font-size: 1.5rem;
+    line-height: 20px; }
   .design__card {
     margin-bottom: 5rem; } }
 
@@ -624,7 +625,8 @@ img {
   .hero__scroll-down {
     display: none; }
   .design__paragraph {
-    font-size: 1rem; } }
+    font-size: 1rem;
+    line-height: 15px; } }
 
 @media screen and (max-height: 550px) {
   .hero__scroll-down {
