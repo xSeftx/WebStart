@@ -644,20 +644,23 @@ img {
     font-family: 'Yeseva One', cursive;
     font-weight: 400;
     font-size: 1.357rem;
+    line-height: 26px;
     text-align: center;
     margin: 0;
-    margin-bottom: 2.426rem; }
+    margin-bottom: 2rem; }
   .modal__form {
     display: flex;
     flex-direction: column; }
   .modal__input {
-    margin-bottom: 3.428rem; }
+    margin-bottom: 3.4rem; }
     .modal__input:last-of-type {
-      margin-bottom: 1rem; }
+      margin-bottom: 0.5px; }
   .modal__policy {
     margin-bottom: 2.7rem; }
   .modal__button {
-    align-self: flex-end; }
+    align-self: flex-end;
+    padding: 19px 22px;
+    width: 15.2rem; }
 
 @media screen and (max-width: 1330px) {
   html {
