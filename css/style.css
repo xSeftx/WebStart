@@ -748,7 +748,7 @@ img {
   .swiper-slide-active {
     margin: 0;
     opacity: 1; }
-  .swiper-slide-index {
+  .swiper-slide-next {
     opacity: 0; }
 
 .swiper-pagination-bullet {
