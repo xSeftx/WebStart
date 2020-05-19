@@ -37,7 +37,7 @@ $(document).ready(function (){
         modal.toggleClass('modal--visible');
     });
     $(modal).on('click', function(e) {
-        if(e.target == $(this)) {
+        if(e.target.closest(modal).length == 0) {
             modal.toggleClass('modal--visible')
         }
     })

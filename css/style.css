@@ -858,6 +858,6 @@ img {
 
 @media screen and (max-width: 370px) {
   .logo__link {
-    font-size: 1.1rem; }
+    font-size: 12px; }
   .contacts__phone {
-    font-size: 1.1rem; } }
+    font-size: 12px; } }
