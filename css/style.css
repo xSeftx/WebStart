@@ -419,7 +419,8 @@ template {
   .col-50__content {
     width: 37%; }
   .col-50__image {
-    width: 55%; }
+    width: 55%;
+    margin-top: 1.9rem; }
 
 *, *:before, *:after {
   box-sizing: border-box; }
@@ -732,7 +733,7 @@ img {
     flex-basis: 50%;
     margin-bottom: 2.42rem;
     padding-bottom: 2rem;
-    margin-right: -1.8rem; }
+    margin-right: -2.9rem; }
   .swiper-slide__heading {
     margin: 0;
     font-size: 1.285rem;
