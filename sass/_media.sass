@@ -81,10 +81,38 @@
         &__paragraph
             font-size: 15px
             line-height: 22px
+    .control
+        &__button
+            order: 2
+        &__policy
+            display: flex
+            margin-left: -13px
+            margin-top: -20px
+            margin-bottom: 37px
+        &__video
+             max-width: 40rem
+             min-height: 25rem   
+        &__text
+            font-size: 1.3rem
+            margin-bottom: 26px
+        &__input-group
+            flex-basis: 100%
+            margin-bottom: 63px
+    .video
+        background-size: cover 
+        &__play
+            width: 5rem
+            height: 5rem    
 @media screen and ( max-height: 550px  )
     .hero
         &__scroll-down
             display: none
+@media screen and ( max-width: 480px )
+    .control
+        &__video
+            max-width: 35rem
+            min-height: 20rem
+               
     
 @media screen and ( max-width: 370px )
     .logo
@@ -93,6 +121,13 @@
     .contacts
         &__phone
             font-size: 12px
+    .control
+        &__text
+            font-size: 1rem
+            line-height: 169.8%
+        &__video
+            max-width: 24.285rem
+            min-height: 14.786rem
     
     
     

@@ -351,21 +351,20 @@ template {
   border: none;
   border-bottom: 1px solid rgba(54, 54, 54, 0.3);
   font-size: 1.285rem;
-  color: #fff;
   padding: 0.5rem 0; }
-  .input::-webkit-input-placeholder {
+  .input--light::-webkit-input-placeholder {
     opacity: 1;
     color: #fff; }
-  .input::-moz-placeholder {
+  .input--light::-moz-placeholder {
     opacity: 1;
     color: #fff; }
-  .input:-ms-input-placeholder {
+  .input--light:-ms-input-placeholder {
     opacity: 1;
     color: #fff; }
-  .input::-ms-input-placeholder {
+  .input--light::-ms-input-placeholder {
     opacity: 1;
     color: #fff; }
-  .input::placeholder {
+  .input--light::placeholder {
     opacity: 1;
     color: #fff; }
 
@@ -444,15 +443,22 @@ img {
     text-align: center; }
     .section-title--left {
       text-align: left; }
-    .section-title__heading {
+    .section-title--light {
+      color: #fff; }
+    .section-title__projects {
       text-transform: uppercase;
       font-family: 'Yeseva One', cursive;
       font-weight: 400;
       line-height: 138%;
       font-size: 27px;
-      line-height: 37px; }
-      .section-title__heading--primary {
-        color: #E3B873; }
+      line-height: 37px;
+      color: #E3B873; }
+    .section-title__heading {
+      text-transform: uppercase;
+      font-family: 'Yeseva One', cursive;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 28px; }
     .section-title__word {
       display: flex;
       align-items: center; }
@@ -621,6 +627,74 @@ img {
   .title--primary {
     color: #E3B873; }
 
+.control__section-title {
+  margin-bottom: 2.2rem;
+  margin-top: -30rem; }
+
+.control-title {
+  margin-bottom: 1rem; }
+
+.control__video {
+  position: relative;
+  display: flex;
+  margin: auto;
+  margin-bottom: 4.428rem;
+  max-width: 58.357rem;
+  min-height: 31rem;
+  background: #131313 url("../img/video-mask.jpg") no-repeat center;
+  box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.15); }
+  .control__video::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); }
+
+.control__text {
+  max-width: 40.785rem;
+  margin: auto;
+  margin-bottom: 4.5rem;
+  text-align: center;
+  font-size: 1.428rem;
+  line-height: 2.4rem; }
+  .control__text::before {
+    content: '';
+    display: block;
+    margin: auto;
+    width: 55px;
+    height: 2px;
+    background-color: #E3B873;
+    border-radius: 30px;
+    margin-bottom: 2rem; }
+
+.control__form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 55rem;
+  margin: auto; }
+
+.control__input-group {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 30%; }
+
+.control__input {
+  margin-top: -0.4rem; }
+
+.control__button {
+  padding: 1.2857rem 4.785rem; }
+
+.control__policy {
+  flex-basis: 100%;
+  margin-top: 1.2rem; }
+  .control__policy-label {
+    justify-content: center; }
+
+.video__play {
+  margin: auto;
+  position: relative; }
+
 .types__section-title {
   margin-bottom: 2rem; }
 
@@ -724,6 +798,9 @@ img {
     align-self: flex-end;
     padding: 19px 22px;
     width: 15.2rem; }
+
+.projects {
+  padding-bottom: 30rem; }
 
 .swiper-slide {
   display: flex;
@@ -850,14 +927,46 @@ img {
     display: none; }
   .design__paragraph {
     font-size: 15px;
-    line-height: 22px; } }
+    line-height: 22px; }
+  .control__button {
+    order: 2; }
+  .control__policy {
+    display: flex;
+    margin-left: -13px;
+    margin-top: -20px;
+    margin-bottom: 37px; }
+  .control__video {
+    max-width: 40rem;
+    min-height: 25rem; }
+  .control__text {
+    font-size: 1.3rem;
+    margin-bottom: 26px; }
+  .control__input-group {
+    flex-basis: 100%;
+    margin-bottom: 63px; }
+  .video {
+    background-size: cover; }
+    .video__play {
+      width: 5rem;
+      height: 5rem; } }
 
 @media screen and (max-height: 550px) {
   .hero__scroll-down {
     display: none; } }
 
+@media screen and (max-width: 480px) {
+  .control__video {
+    max-width: 35rem;
+    min-height: 20rem; } }
+
 @media screen and (max-width: 370px) {
   .logo__link {
     font-size: 12px; }
   .contacts__phone {
-    font-size: 12px; } }
+    font-size: 12px; }
+  .control__text {
+    font-size: 1rem;
+    line-height: 169.8%; }
+  .control__video {
+    max-width: 24.285rem;
+    min-height: 14.786rem; } }
