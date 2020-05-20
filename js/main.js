@@ -36,17 +36,20 @@ $(document).ready(function (){
     closeBtn.on('click', function() {
         modal.toggleClass('modal--visible');
     });
+
     $(modal).on('click', function(e) {
-        if(e.target.closest(modal).length == 0) {
+        if(e.target == this) {
             modal.toggleClass('modal--visible')
         }
     })
+    
     	
     $(document).on('keyup', function(e) {
         if(e.keyCode === 27) {
             modal.removeClass('modal--visible')
         }
     })
+   
     
 
     $(function(){
