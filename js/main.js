@@ -84,6 +84,7 @@ $(document).ready(function (){
 
     next.css('left', prev.width() + 29 + bullets.width() + 18)
     bullets.css('left', prev.width() + 29)
+    
 
     
     var wow = new WOW({
@@ -100,8 +101,31 @@ $(document).ready(function (){
         resetAnimation: true,     // reset animation on end (default is true)
         }
       );
-      wow.init();   
+    wow.init();   
     
+     // Валидация формы
+    $('.modal__form').validate({
+        errorClass: "invalid",
+        rules: {
+          // строчное правило
+          userName: "required",
+          userPhone: "required",
+          // правило-объект
+          userEmail: {
+            required: true,
+            email: true
+          }
+        },  // сообщения
+        messages: {
+            userName: "Пожалуйста, укажите ваше имя",
+            userPhone: "Пожайлуста, укажите ваш номер телефона",
+            userEmail: {
+              required: "Нам нужен ваш адрес электронной почты, чтобы связаться с вами",
+              email: "Ваш адрес электронной почты должен быть в формате name@mail.ru"
+            }
+        }
         
+    });
+         
 });
 

@@ -15,16 +15,20 @@
             &__heading
                 font-size: 1.7rem
     .swiper
-        &-slide
+        &-slide            
             &__heading
-                font-size: 1rem
+                font-size: 14px
             &__value
-                font-size: 1rem
+                font-size: 14px
     
 @media screen and ( max-width: 1200px )
     .nav
         &__item
             margin-right: 1rem
+@media screen and ( max-width: 1100px )
+    .swiper-slide
+        &__text
+            margin-right: 0
 @media screen and ( max-width: 992px )
     .nav
         display: none
@@ -36,10 +40,26 @@
     .card
         &__title
             font-size: 1rem
-@media screen and ( max-width: 760px )
+
+    
+@media screen and ( max-width: 810px )
     .row
         flex-direction: column
         align-items: center
+    .col-50
+        width: 100% 
+        &__image
+            margin-top: 2.0625rem 
+    .swiper-slide
+        &__text
+            margin-right: -6rem  
+            &--down
+                margin-bottom: 0
+                      
+                
+                
+@media screen and ( max-width: 760px )
+    
     .types
         &__card
             margin-bottom: 5rem 
@@ -51,10 +71,9 @@
             font-size: 1.5rem
         &__card
             margin-bottom: 5rem 
-    .col-50
-        width: 100% 
-        &__image
-            margin-top: 2.0625rem
+    
+       
+
 @media screen and ( max-width: 570px )
     .contacts
         &__phone
@@ -65,18 +84,27 @@
             display: none
     .title
         font-size: 1.64rem
-    .hero
+    .hero        
         &__content
+            display: flex
+            flex-direction: column  
+            align-items: center
+            justify-content: start
+            min-height: 100vh
             max-width: 22.86rem
-        &__text
-            font-size: 1.29rem
-            margin-bottom: 2.28rem
+            padding-top: 7rem
+        &__text            
+            font-size: 18px
+            line-height: 24px
+            margin-bottom: 2.28rem        
         &__button
             display: block
             min-width: 22.86rem
             margin-bottom: 1.85rem
         &__scroll-down
             display: none
+    .title
+        font-size: 23px
     .design
         &__paragraph
             font-size: 15px
@@ -107,28 +135,91 @@
     .hero
         &__scroll-down
             display: none
+@media screen and ( max-width: 515px)
+    .swiper-slide
+        &__text
+            margin-right: -3rem  
+    
 @media screen and ( max-width: 480px )
     .control
         &__video
             max-width: 35rem
             min-height: 20rem
-               
+@media screen and ( max-width: 410px )
+    .swiper-slide
+        &__text
+            margin-right: 0           
     
-@media screen and ( max-width: 370px )
+@media screen and ( max-width: 375px )
     .logo
         &__link
             font-size: 12px
     .contacts
         &__phone
             font-size: 12px
+    .section
+        &.controle
+            // background: $dark
     .control
+        
         &__text
-            font-size: 1rem
-            line-height: 169.8%
+            font-size: 14px
+            line-height: 24px
+            &::before
+                margin-bottom: 1.4rem   
         &__video
-            max-width: 24.285rem
-            min-height: 14.786rem
+            margin-top: 40px
+            margin-bottom: 2.2rem
+            max-width: 340px
+            min-height: 207px
+        &-title
+            font-size: 22px
+            margin-bottom: 1.5rem
+        &__policy
+            margin-top: -2.9rem
+            margin-bottom: 5.6rem
+        &__input
+            font-size: 18px
+            line-height: 25px
+            padding-top: 2px
+            &-group
+                margin-bottom: 5.1rem 
+        &__button
+            max-width: 100%
+            padding: 20px 124px  
+    .label
+        font-size: 15px
+        line-height: 20px            
+        
+    .hero
+        &__content
+            max-width: 100%
+        &__text
+            margin-bottom: 32px
+        &__button
+            padding: 19px 70px
+            margin-bottom: 26px
+            width: 338px
+    .projects
+        &__heading
+            font-size: 22px
+            line-height: 30px
+            margin-bottom: 22px
+    .swiper-slide
+        &__heading
+            font-size: 14px
+            margin-bottom: 11px
+               
+        &__value
+            font-size: 14px
+    .col-50
+        &__image
+            margin-top: 3rem 
+            max-height: 30rem
     
+    .swiper-wrapper
+        &-image
+            height: 202px  
     
     
         

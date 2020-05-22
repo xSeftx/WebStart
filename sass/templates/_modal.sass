@@ -13,6 +13,7 @@
     display: flex
     align-items: center
     justify-content: center
+    
     &--visible
         opacity: 1
         visibility: visible
@@ -43,8 +44,11 @@
     &__form
         display: flex
         flex-direction: column
-    &__input
-        margin-bottom: 3.4rem
+    &__input        
+        &-group
+            display: flex
+            flex-direction: column
+            margin-bottom: 3.4rem
         &:last-of-type
             margin-bottom: 0.5px
     &__policy
