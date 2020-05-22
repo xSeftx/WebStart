@@ -353,23 +353,18 @@ template {
   font-size: 1.285rem;
   padding: 0.5rem 0;
   color: #fff; }
-  .input.invalid {
-    border-bottom: 1px solid red; }
   .input--light::-webkit-input-placeholder {
-    opacity: 1;
     color: #fff; }
   .input--light::-moz-placeholder {
-    opacity: 1;
     color: #fff; }
   .input--light:-ms-input-placeholder {
-    opacity: 1;
     color: #fff; }
   .input--light::-ms-input-placeholder {
-    opacity: 1;
     color: #fff; }
   .input--light::placeholder {
-    opacity: 1;
     color: #fff; }
+  .input.invalid {
+    border-bottom: 1px solid red; }
 
 .policy__checkbox {
   opacity: 0;
@@ -1051,6 +1046,9 @@ img {
     font-size: 12px; }
   .contacts__phone {
     font-size: 12px; }
+  .section.controle {
+    background: #252525;
+    color: #fff; }
   .control__text {
     font-size: 14px;
     line-height: 24px; }
@@ -1074,8 +1072,8 @@ img {
     .control__input-group {
       margin-bottom: 5.1rem; }
   .control__button {
-    max-width: 100%;
-    padding: 20px 124px; }
+    max-width: 340;
+    width: 100%; }
   .label {
     font-size: 15px;
     line-height: 20px; }
