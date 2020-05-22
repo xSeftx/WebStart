@@ -30,18 +30,18 @@
    border-bottom: 1px solid rgba(54, 54, 54, 0.3)
    font-size: 1.285rem   
    padding: 0.5rem 0
-   color: $light   
-   &--light
-      &::placeholder
-         color: $light
-         // opacity: 1
+   color: $light
    &.invalid
       border-bottom: 1px solid red
+   &--light
+      &::placeholder
+         opacity: 1
+         color: $light
 .policy
    &__checkbox
       opacity: 0
       visibility: hidden
-      &:checked +
+      &:checked +s
          .policy__label
             &::before
                background: $primary url('../img/check.svg') no-repeat center / 0.8rem

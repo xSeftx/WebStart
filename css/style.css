@@ -353,23 +353,28 @@ template {
   font-size: 1.285rem;
   padding: 0.5rem 0;
   color: #fff; }
-  .input--light::-webkit-input-placeholder {
-    color: #fff; }
-  .input--light::-moz-placeholder {
-    color: #fff; }
-  .input--light:-ms-input-placeholder {
-    color: #fff; }
-  .input--light::-ms-input-placeholder {
-    color: #fff; }
-  .input--light::placeholder {
-    color: #fff; }
   .input.invalid {
     border-bottom: 1px solid red; }
+  .input--light::-webkit-input-placeholder {
+    opacity: 1;
+    color: #fff; }
+  .input--light::-moz-placeholder {
+    opacity: 1;
+    color: #fff; }
+  .input--light:-ms-input-placeholder {
+    opacity: 1;
+    color: #fff; }
+  .input--light::-ms-input-placeholder {
+    opacity: 1;
+    color: #fff; }
+  .input--light::placeholder {
+    opacity: 1;
+    color: #fff; }
 
 .policy__checkbox {
   opacity: 0;
   visibility: hidden; }
-  .policy__checkbox:checked + .policy__label::before {
+  .policy__checkbox:checked + s .policy__label::before {
     background: #E3B873 url("../img/check.svg") no-repeat center/0.8rem; }
 
 .policy__label {
@@ -685,8 +690,20 @@ img {
   flex-basis: 30%; }
 
 .control__input {
-  margin-top: -0.4rem;
-  color: #131313; }
+  margin-top: -0.4rem; }
+  .control__input::-webkit-input-placeholder {
+    color: #363636; }
+  .control__input::-moz-placeholder {
+    color: #363636; }
+  .control__input:-ms-input-placeholder {
+    color: #363636; }
+  .control__input::-ms-input-placeholder {
+    color: #363636; }
+  .control__input::placeholder {
+    color: #363636; }
+
+.control__label {
+  color: rgba(54, 54, 54, 0.5); }
 
 .control__button {
   padding: 1.2857rem 4.785rem; }
@@ -1069,6 +1086,16 @@ img {
     font-size: 18px;
     line-height: 25px;
     padding-top: 2px; }
+    .control__input::-webkit-input-placeholder {
+      color: #fff; }
+    .control__input::-moz-placeholder {
+      color: #fff; }
+    .control__input:-ms-input-placeholder {
+      color: #fff; }
+    .control__input::-ms-input-placeholder {
+      color: #fff; }
+    .control__input::placeholder {
+      color: #fff; }
     .control__input-group {
       margin-bottom: 5.1rem; }
   .control__button {
@@ -1076,7 +1103,8 @@ img {
     width: 100%; }
   .label {
     font-size: 15px;
-    line-height: 20px; }
+    line-height: 20px;
+    color: rgba(255, 255, 255, 0.5); }
   .hero__content {
     max-width: 100%; }
   .hero__text {
