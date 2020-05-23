@@ -374,7 +374,7 @@ template {
 .policy__checkbox {
   opacity: 0;
   visibility: hidden; }
-  .policy__checkbox:checked + s .policy__label::before {
+  .policy__checkbox:checked + .policy__label::before {
     background: #E3B873 url("../img/check.svg") no-repeat center/0.8rem; }
 
 .policy__label {
@@ -389,6 +389,7 @@ template {
     height: 18px;
     border: 1px solid #E3B873;
     border-radius: 1px;
+    cursor: pointer;
     margin-right: 0.64rem; }
 
 .scroll_top__link {
@@ -690,16 +691,22 @@ img {
   flex-basis: 30%; }
 
 .control__input {
+  color: #131313;
   margin-top: -0.4rem; }
   .control__input::-webkit-input-placeholder {
+    opacity: 1;
     color: #363636; }
   .control__input::-moz-placeholder {
+    opacity: 1;
     color: #363636; }
   .control__input:-ms-input-placeholder {
+    opacity: 1;
     color: #363636; }
   .control__input::-ms-input-placeholder {
+    opacity: 1;
     color: #363636; }
   .control__input::placeholder {
+    opacity: 1;
     color: #363636; }
 
 .control__label {

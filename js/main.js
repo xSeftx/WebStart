@@ -104,11 +104,15 @@ $(document).ready(function (){
     wow.init();   
     
      // Валидация формы
-    $('.modal__form').validate({
+    $('.modal__form',).validate({
         errorClass: "invalid",
         rules: {
           // строчное правило
-          userName: "required",
+          userName: {
+              required: true,
+              minlength: 2,
+              maxlength: 15              
+          },
           userPhone: "required",
           // правило-объект
           userEmail: {
@@ -117,7 +121,11 @@ $(document).ready(function (){
           }
         },  // сообщения
         messages: {
-            userName: "Пожалуйста, укажите ваше имя",
+            userName: {
+                required: "Пожалуйста, укажите ваше имя",
+                minlength: "Имя не короче 2 символов и не больше 15",
+                maxlength: "Имя не короче 2 символов и не больше 15"
+            },
             userPhone: "Пожайлуста, укажите ваш номер телефона",
             userEmail: {
               required: "Нам нужен ваш адрес электронной почты, чтобы связаться с вами",
@@ -126,6 +134,69 @@ $(document).ready(function (){
         }
         
     });
+    $('.footer__form',).validate({
+        errorClass: "invalid",
+        rules: {
+          // строчное правило
+          userName: {
+              required: true,
+              minlength: 2,
+              maxlength: 15              
+          },
+          userPhone: {
+              required: true,
+              minlength: 10,
+          },
+          // правило-объект
+          userQuestion: "required" 
+            
+          
+        },  // сообщения
+        messages: {
+            userName: {
+                required: "Пожалуйста, укажите ваше имя",
+                minlength: "Имя не короче 2 символов и не больше 15",
+                maxlength: "Имя не короче 2 символов и не больше 15"
+            },
+            userPhone: {
+                required: "Пожайлуста, укажите ваш номер телефона",
+                minlength: "Укажите номер телефона в формате +7(000) 000-00-00"
+            },
+            userQuestion: "Задайте свой вопрос"
+        }
+        
+    });
+    $('.control__form',).validate({
+        errorClass: "invalid",
+        rules: {
+          // строчное правило
+          userName: {
+              required: true,
+              minlength: 2,
+              maxlength: 15              
+          },
+          userPhone: "required",
+          // правило-объект
+          userEmail: {
+            required: true,
+            email: true
+          }
+        },  // сообщения
+        messages: {
+            userName: {
+                required: "Пожалуйста, укажите ваше имя",
+                minlength: "Имя не короче 2 символов и не больше 15",
+                maxlength: "Имя не короче 2 символов и не больше 15"
+            },
+            userPhone: "Укажите ваш номер телефона",
+            
+        }
+        
+    });
+
+    ///маска для телефона
+
+    $('[type=tel]').mask('+7 (000) 000-00-00', {placeholder: "+7 (__) __-__-___"});
          
 });
 
