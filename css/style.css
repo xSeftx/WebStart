@@ -6,7 +6,7 @@
   font-display: wrap; }
 
 @font-face {
-  font-family: 'Futura Demi';
+  font-family: 'Futura DemiC';
   src: url("../fonts/FuturaDemiC.woff") format("woff"), url("../fonts/FuturaDemiC.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
@@ -507,11 +507,12 @@ img {
 
 .logo__link {
   font-size: 14px;
-  font-weight: normal;
+  font-weight: 500;
   text-decoration: none;
   color: #E3B873;
   text-transform: uppercase;
-  margin-right: 5rem; }
+  margin-right: 5rem;
+  font-family: "Futura DemiC", sans-serif; }
 
 .nav__item {
   text-decoration: none;
@@ -532,7 +533,9 @@ img {
 
 .contacts__button {
   font-size: 13px;
-  line-height: 15px; }
+  line-height: 15px;
+  font-weight: 500;
+  font-family: "Futura DemiC", sans-serif; }
 
 .hero {
   position: relative;
@@ -579,7 +582,8 @@ img {
     left: 0;
     top: 0;
     max-width: 80px;
-    height: 100%; }
+    height: 100%;
+    font-family: "Futura DemiC", sans-serif; }
   .hero__scroll-down {
     position: absolute;
     display: flex;
