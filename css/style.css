@@ -506,7 +506,8 @@ img {
   align-items: center; }
 
 .logo__link {
-  font-size: 1.07rem;
+  font-size: 14px;
+  font-weight: normal;
   text-decoration: none;
   color: #E3B873;
   text-transform: uppercase;
@@ -530,7 +531,8 @@ img {
   margin-right: 45px; }
 
 .contacts__button {
-  font-size: 1.001rem; }
+  font-size: 13px;
+  line-height: 15px; }
 
 .hero {
   position: relative;
@@ -1017,7 +1019,7 @@ img {
     margin-bottom: 2.28rem; }
   .hero__button {
     display: block;
-    min-width: 22.86rem;
+    min-width: 21rem;
     margin-bottom: 1.85rem; }
   .hero__scroll-down {
     display: none; }
@@ -1117,9 +1119,9 @@ img {
   .hero__text {
     margin-bottom: 32px; }
   .hero__button {
-    padding: 19px 70px;
+    padding: 19px 5rem;
     margin-bottom: 26px;
-    width: 338px; }
+    max-width: 338px; }
   .projects__heading {
     font-size: 22px;
     line-height: 30px;
