@@ -323,9 +323,12 @@ template {
   border: none;
   border-radius: 2px;
   text-transform: uppercase;
-  font-size: 0.93rem; }
+  font-size: 0.93rem;
+  font-family: "Futura DemiC", sans-serif;
+  font-weight: 500; }
   .button:hover {
-    cursor: pointer; }
+    cursor: pointer;
+    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2); }
   .button--primary {
     background-color: #E3B873;
     color: #fff;
@@ -851,7 +854,7 @@ img {
     margin: auto;
     margin-top: -20rem;
     padding: 2.5rem;
-    margin-bottom: 3.714rem; }
+    margin-bottom: 2rem; }
   .footer__title {
     font-family: 'Yeseva One', cursive;
     text-transform: uppercase;
@@ -878,10 +881,35 @@ img {
         margin-bottom: 2rem; }
   .footer__policy {
     flex-basis: 100%;
-    margin-bottom: 3.6rem; }
+    margin-bottom: 3.6rem;
+    margin-left: -11px; }
   .footer__button {
     margin: auto;
-    padding: 1.285rem 4.785rem; }
+    font-size: 15px;
+    line-height: 26px;
+    padding: 1rem 4.4rem; }
+  .footer__info {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 589px;
+    flex-wrap: wrap;
+    padding: 0 40px; }
+  .footer__text {
+    font-family: 'Yeseva One', cursive;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    color: #E3B873;
+    text-transform: uppercase;
+    margin-bottom: 26px; }
+  .footer__img {
+    margin-bottom: 43px; }
+  .footer-image {
+    margin-right: 10px; }
   .footer__menu {
     background-color: #131313;
     padding: 4.285rem 0; }
@@ -889,6 +917,11 @@ img {
     margin: auto;
     min-height: 465px;
     max-width: 925px; }
+
+.text-phone {
+  text-decoration: none;
+  color: #E3B873;
+  pointer: cursor; }
 
 .modal {
   opacity: 0;
