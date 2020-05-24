@@ -719,7 +719,8 @@ img {
   color: rgba(54, 54, 54, 0.5); }
 
 .control__button {
-  padding: 1.2857rem 4.785rem; }
+  padding: 1.2857rem 4.785rem;
+  height: 50px; }
 
 .control__policy {
   flex-basis: 100%;
@@ -884,6 +885,10 @@ img {
   .footer__menu {
     background-color: #131313;
     padding: 4.285rem 0; }
+  .footer__map {
+    margin: auto;
+    min-height: 465px;
+    max-width: 925px; }
 
 .modal {
   opacity: 0;
