@@ -323,9 +323,10 @@ template {
   border: none;
   border-radius: 2px;
   text-transform: uppercase;
-  font-size: 0.93rem;
+  font-size: 13px;
   font-family: "Futura DemiC", sans-serif;
-  font-weight: 500; }
+  font-weight: 400;
+  line-height: 15px; }
   .button:hover {
     cursor: pointer;
     box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2); }
@@ -335,7 +336,8 @@ template {
     box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
     transition: box-shadow 0.3s; }
     .button--primary:hover {
-      box-shadow: none; }
+      box-shadow: none;
+      box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.5); }
   .button--outline {
     border: 1px solid #fff;
     background-color: transparent;
@@ -432,7 +434,8 @@ template {
     margin-top: 1.9rem; }
 
 *, *:before, *:after {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  outline: none; }
 
 html {
   font-size: 14px; }
@@ -579,7 +582,11 @@ img {
   .hero__button {
     margin-right: 20px;
     min-width: 207px;
-    min-height: 51px; }
+    min-height: 51px;
+    font-family: "Futura DemiC", sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 15px; }
   .hero__instagram {
     position: absolute;
     left: 0;
@@ -645,7 +652,7 @@ img {
 
 .hero__title {
   margin-top: 6rem;
-  margin-bottom: 1rem; }
+  margin-bottom: 1.05rem; }
 
 .control__section-title {
   margin-bottom: 2.2rem;
@@ -1047,24 +1054,29 @@ img {
     display: none; }
   .title {
     font-size: 1.64rem; }
-  .hero__content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
-    min-height: 100vh;
-    max-width: 22.86rem;
-    padding-top: 7rem; }
-  .hero__text {
-    font-size: 18px;
-    line-height: 24px;
-    margin-bottom: 2.28rem; }
-  .hero__button {
+  .projects {
+    padding-top: 0; }
+  .hero {
     display: block;
-    min-width: 21rem;
-    margin-bottom: 1.85rem; }
-  .hero__scroll-down {
-    display: none; }
+    height: 600px; }
+    .hero__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: start;
+      min-height: 100vh;
+      max-width: 22.86rem;
+      padding-top: 7rem; }
+    .hero__text {
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 2.28rem; }
+    .hero__button {
+      display: block;
+      min-width: 21rem;
+      margin-bottom: 1.85rem; }
+    .hero__scroll-down {
+      display: none; }
   .title {
     font-size: 23px; }
   .design__paragraph {
@@ -1109,13 +1121,41 @@ img {
   .swiper-slide__text {
     margin-right: 0; }
   .logo__link {
-    font-size: 12px; }
+    font-size: 12px;
+    margin-left: -13px; }
   .contacts__phone {
-    font-size: 12px; }
+    display: block;
+    flex-wrap: nowrap;
+    font-size: 12px;
+    margin-right: -5px; }
   .section.controle {
     background: #131313;
     color: #fff;
     padding: 0; }
+  .hero {
+    margin-top: -2px;
+    margin-left: -13px;
+    height: 536px; }
+    .hero::after {
+      background: none; }
+    .hero__title {
+      position: relative;
+      margin-bottom: 15px; }
+    .hero__text {
+      line-height: 24px;
+      margin-bottom: 32px; }
+    .hero__button {
+      padding: 19px 0;
+      margin-bottom: 26px;
+      max-width: 338px;
+      width: 100%;
+      margin-right: -10px; }
+      .hero__button--outline {
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 15px; }
+    .hero__content {
+      max-width: 100%; }
   .control__text {
     font-size: 14px;
     line-height: 24px; }
@@ -1157,20 +1197,13 @@ img {
     font-size: 15px;
     line-height: 20px;
     color: rgba(255, 255, 255, 0.5); }
-  .hero__content {
-    max-width: 100%; }
-  .hero__text {
-    margin-bottom: 32px; }
-  .hero__button {
-    padding: 19px 0;
-    margin-bottom: 26px;
-    max-width: 338px;
-    width: 100%;
-    margin-right: 0; }
-  .projects__heading {
-    font-size: 22px;
-    line-height: 30px;
-    margin-bottom: 22px; }
+  .projects {
+    padding-top: 18px;
+    margin-left: -12px; }
+    .projects__heading {
+      font-size: 22px;
+      line-height: 30px;
+      margin-bottom: 22px; }
   .swiper-slide__heading {
     font-size: 14px;
     margin-bottom: 11px; }

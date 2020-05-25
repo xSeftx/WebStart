@@ -84,7 +84,11 @@
             display: none
     .title
         font-size: 1.64rem
-    .hero        
+    .projects
+        padding-top: 0
+    .hero 
+        display: block  
+        height: 600px     
         &__content
             display: flex
             flex-direction: column  
@@ -153,22 +157,49 @@
             margin-right: 0
     .logo
         &__link
-            font-size: 12px
+            font-size: 12px 
+            margin-left: -13px           
     .contacts
         &__phone
-            font-size: 12px
+            display: block
+            flex-wrap: nowrap
+            font-size: 12px               
+            margin-right: -5px
     .section
         &.controle
             background: $dark
             color: $light  
-            padding: 0                      
-               
-    .types
+            padding: 0        
+                                      
+    .hero                      
+        margin-top: -2px
+        margin-left: -13px
+        height: 536px
         
-        &__section-title
+        &::after
+            background: none
+        
+        &__title            
+            position: relative
+            margin-bottom: 15px   
+        &__text
+            line-height: 24px
+            margin-bottom: 32px
+        &__button
+            padding: 19px 0
+            margin-bottom: 26px
+            max-width: 338px
+            width: 100%
+            margin-right: -10px 
+            &--outline
+                font-weight: 400
+                font-size: 13px
+                line-height: 15px
+   
+        &__content
+            max-width: 100%   
                  
-    .control
-        
+    .control        
         &__text
             font-size: 14px
             line-height: 24px
@@ -197,26 +228,16 @@
             position: relative
             max-width: 340
             width: 100%  
-            margin-bottom: -20px
+            margin-bottom: -20px            
             
     .label
         font-size: 15px
         line-height: 20px 
-        color: rgba(255, 255, 255, 0.5)
-          
-        
-    .hero
-        &__content
-            max-width: 100%
-        &__text
-            margin-bottom: 32px
-        &__button
-            padding: 19px 0
-            margin-bottom: 26px
-            max-width: 338px
-            width: 100%
-            margin-right: 0
+        color: rgba(255, 255, 255, 0.5)       
+    
     .projects
+        padding-top: 18px
+        margin-left: -12px
         &__heading
             font-size: 22px
             line-height: 30px
@@ -224,15 +245,13 @@
     .swiper-slide
         &__heading
             font-size: 14px
-            margin-bottom: 11px
-               
+            margin-bottom: 11px               
         &__value
             font-size: 14px
     .col-50
         &__image
             margin-top: 3rem 
-            max-height: 30rem
-    
+            max-height: 30rem    
     .swiper-wrapper
         &-image
             height: 202px  
