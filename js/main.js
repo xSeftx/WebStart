@@ -104,9 +104,16 @@ $(document).ready(function (){
     wow.init();   
     
      // Валидация формы
-    $('.modal__form',).validate({
+     $('.modal__form',).validate({
         errorClass: "invalid",
-        errorElement: "modal",                      
+        errorElement: "footer",
+        errorPlacement: function(even, types) {
+            if ("checkbox" == types.attr("type")) {
+                return types.next("label").append(even);
+            } else {
+                even.insertAfter($(types))
+            }
+        },                   
         rules: {
           // строчное правило
           userModal: "required",
@@ -115,34 +122,45 @@ $(document).ready(function (){
               minlength: 2,
               maxlength: 15              
           },
-          userPhone: "required",
-          // правило-объект
+          userPhone: {
+              required: true,
+              minlength: 18,
+          },
           userEmail: {
             required: true,
-            email: true
-          }          
-        }, 
-        
-         // сообщения
+            email: true,
+          },  
+            
+          
+        },  // сообщения
         messages: {
             userName: {
                 required: "Пожалуйста, укажите ваше имя",
                 minlength: "Имя не короче 2 символов и не больше 15",
                 maxlength: "Имя не короче 2 символов и не больше 15"
             },
-            userPhone: "Укажите ваш номер телефона",
+            userPhone: {
+                required: "Укажите ваш номер телефона",
+                minlength: "Укажите верный номер"
+            },            
             userModal: "Обязательно для отправки",
             userEmail: {
-              required: "Нам нужен ваш адрес электронной почты, чтобы связаться с вами",
-              email: "Ваш адрес электронной почты должен быть в формате name@mail.ru"
+                required: "Укажите ваш email",
+                email: "Введите в формате - name@mail.ru"
             },
-            
         }
-        
+         
     });
     $('.footer__form',).validate({
         errorClass: "invalid",
-        errorElement: "footer",                   
+        errorElement: "footer",
+        errorPlacement: function(even, types) {
+            if ("checkbox" == types.attr("type")) {
+                return types.next("label").append(even);
+            } else {
+                even.insertAfter($(types))
+            }
+        },                   
         rules: {
           // строчное правило
           userFooter: "required",
@@ -153,7 +171,7 @@ $(document).ready(function (){
           },
           userPhone: {
               required: true,
-              minlength: 10,
+              minlength: 16,
           },
           // правило-объект
           userQuestion: "required" 
@@ -168,7 +186,7 @@ $(document).ready(function (){
             },
             userPhone: {
                 required: "Укажите ваш номер телефона",
-                minlength: "Укажите номер телефона в формате +7(000) 000-00-00"
+                minlength: "Укажите верный номер"
             },
             userQuestion: "Задайте свой вопрос",
             userFooter: "Обязательно для отправки",
@@ -177,7 +195,14 @@ $(document).ready(function (){
     });
     $('.control__form',).validate({
         errorClass: "invalid",
-        errorElement: "control",                  
+        errorElement: "control",
+        errorPlacement: function(even, types) {
+            if ("checkbox" == types.attr("type")) {
+                return types.next("label").append(even);
+            } else {
+                even.insertAfter($(types))
+            }
+        },                  
         rules: {
           // строчное правило
           userControl: "required",
@@ -186,8 +211,10 @@ $(document).ready(function (){
               minlength: 2,
               maxlength: 15              
           },
-          userPhone: "required",
-          // правило-объект
+          userPhone: {
+            required: true,
+            minlength: 20,
+          },
           userEmail: {
             required: true,
             email: true
@@ -199,7 +226,10 @@ $(document).ready(function (){
                 minlength: "Имя не короче 2 символов и не больше 15",
                 maxlength: "Имя не короче 2 символов и не больше 15"
             },
-            userPhone: "Укажите ваш номер телефона",
+            userPhone: {
+                required: "Укажите ваш номер телефона",
+                minlength: "Укажите верный номер"
+            },
             userControl: "Обязательно для отправки",
         }
         
@@ -207,7 +237,7 @@ $(document).ready(function (){
 
     ///маска для телефона
 
-    $('[type=tel]').mask('+7 (000) 000-00-00', {placeholder: "+7 (__) __-__-___"});
+    $('[type=tel]').mask('+7 (000) 000-00-00');
     
     //создание yandex карты
     ymaps.ready(function () {

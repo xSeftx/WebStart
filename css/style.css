@@ -364,6 +364,21 @@ template {
   font-weight: 400;
   padding: 0.3rem 0;
   color: #fff; }
+  .input--light::-webkit-input-placeholder {
+    opacity: 1;
+    color: #fff; }
+  .input--light::-moz-placeholder {
+    opacity: 1;
+    color: #fff; }
+  .input--light:-ms-input-placeholder {
+    opacity: 1;
+    color: #fff; }
+  .input--light::-ms-input-placeholder {
+    opacity: 1;
+    color: #fff; }
+  .input--light::placeholder {
+    opacity: 1;
+    color: #fff; }
   .input.invalid {
     border-bottom: 1px solid red; }
 
@@ -381,22 +396,8 @@ control.invalid {
 modal.invalid {
   position: absolute;
   color: red;
-  bottom: -17px; }
-  modal.invalid--light::-webkit-input-placeholder {
-    opacity: 1;
-    color: #fff; }
-  modal.invalid--light::-moz-placeholder {
-    opacity: 1;
-    color: #fff; }
-  modal.invalid--light:-ms-input-placeholder {
-    opacity: 1;
-    color: #fff; }
-  modal.invalid--light::-ms-input-placeholder {
-    opacity: 1;
-    color: #fff; }
-  modal.invalid--light::placeholder {
-    opacity: 1;
-    color: #fff; }
+  bottom: -20px;
+  left: 0; }
 
 .policy__checkbox {
   opacity: 0;

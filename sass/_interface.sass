@@ -42,6 +42,10 @@
    font-weight: 400  
    padding: 0.3rem 0
    color: $light
+   &--light
+      &::placeholder
+         opacity: 1
+         color: $light
    &.invalid
       border-bottom: 1px solid red 
 
@@ -55,18 +59,17 @@ control.invalid
    position: absolute
    color: red
    bottom: -15px
+   
 
 modal.invalid
    position: absolute
    color: red  
-   bottom: -17px 
+   bottom: -20px 
+   left: 0
    
      
         
-   &--light
-      &::placeholder
-         opacity: 1
-         color: $light
+   
 .policy
    &__checkbox
       opacity: 0
