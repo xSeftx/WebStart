@@ -460,45 +460,48 @@
     </main>
     <footer class="footer section--dark" id="footer">
         <div class="container">
-            <div class="footer__wrap">
-                <h3 class="footer__title">Остались вопросы?</h3>
-                <form action="#" class="form footer__form">
-                    <div class="input-group footer__input-group">
-                        <label for="user-name" class="label form__label label--light">Имя</label>
-                        <input type="text" name="userName" class="input form__input footer__input input--light" id="user-name" placeholder="Как вас зовут:">
-                    </div>
-                    <div class="input-group footer__input-group">
-                         <label for="user-phone" class="label form__label label--light" id="user-phone">Телефон</label>
-                        <input type="tel" name="userPhone" class="input form__input footer__input input--light" placeholder="Ваш номер телефона:">
-                    </div>
-                    <div class="input-group footer__input-group footer__input-group--full-width">
-                         <label for="user-question" class="label form__label label--light" id="user-question">Вопрос</label>
-                         <input type="text" name="userQuestion" class="input form__input footer__input input--light"  placeholder="Я хочу спросить:">
-                    </div>
+            <div class="footer__content">
+                <div class="footer__wrap">
+                    <h3 class="footer__title">Остались вопросы?</h3>
+                    <form action="#" class="form footer__form">
+                        <div class="input-group footer__input-group">
+                            <label for="user-name" class="label form__label label--light">Имя</label>
+                            <input type="text" name="userName" class="input form__input footer__input input--light" id="user-name" placeholder="Как вас зовут:">
+                        </div>
+                        <div class="input-group footer__input-group">
+                             <label for="user-phone" class="label form__label label--light" id="user-phone">Телефон</label>
+                            <input type="tel" name="userPhone" class="input form__input footer__input input--light" placeholder="Ваш номер телефона:">
+                        </div>
+                        <div class="input-group footer__input-group footer__input-group--full-width">
+                             <label for="user-question" class="label form__label label--light" id="user-question">Вопрос</label>
+                             <input type="text" name="userQuestion" class="input form__input footer__input input--light"  placeholder="Я хочу спросить:">
+                        </div>
+                        
+                        
+                        <div class="policy footer__policy">
+                            <input type="checkbox" name="policy-checkbox" id="footer__policy-checkbox" class="policy__checkbox" checked>
+                            <label for="footer__policy-checkbox" class="policy__label policy__label--center">Я соглашаюсь с обработкой данных</label>
+                        </div>
+                        <!-- /.policy -->
+                        <button class="button button--primary footer__button">Отправить</button>
+                    </form>
+                    <!-- /.footer__form -->
+                </div> 
+                <!-- footer-wrap            -->
+                <div class="footer__info">
+                    <h3 class="footer__text">Ростов на дону, Торговый центр Plaza
+                        Прямой телефон <a class="text-phone" href="#">+7 (999) 768 32 99</a>
+                    </h3>
+                    <div class="footer__img">
+                        <img class="footer-image" src="img/mail.png" alt="mail">
+                        <img class="footer-image" src="img/instagram.png" alt="instagram">
+                    </div>               
                     
-                    
-                    <div class="policy footer__policy">
-                        <input type="checkbox" name="policy-checkbox" id="footer__policy-checkbox" class="policy__checkbox" checked>
-                        <label for="footer__policy-checkbox" class="policy__label policy__label--center">Я соглашаюсь с обработкой данных</label>
-                    </div>
-                    <!-- /.policy -->
-                    <button class="button button--primary footer__button">Отправить</button>
-                </form>
-                <!-- /.footer__form -->
-            </div> 
-            <!-- footer-wrap            -->
-            <div class="footer__info">
-                <h3 class="footer__text">Ростов на дону, Торговый центр Plaza
-                    Прямой телефон <a class="text-phone" href="#">+7 (999) 768 32 99</a>
-                </h3>
-                <div class="footer__img">
-                    <img class="footer-image" src="img/mail.png" alt="mail">
-                    <img class="footer-image" src="img/instagram.png" alt="instagram">
-                </div>               
-                
+                </div>
+                <div class="map footer__map" id="map"></div>
+                </div>
             </div>
-            <div class="map footer__map" id="map"></div>
-            </div>
+           
             <!-- /.container -->
             
         </div>

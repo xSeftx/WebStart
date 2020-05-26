@@ -1233,18 +1233,16 @@ img {
   .swiper-wrapper-image {
     height: 202px; }
   .footer {
-    display: flex;
-    flex-direction: column; }
-    .footer__wrap {
-      order: 0;
-      padding: 0; }
-    .footer__map {
+    background: #131313; }
+    .footer__content {
       display: flex;
-      order: 1; }
+      flex-direction: column; }
     .footer__info {
-      order: 5; }
+      order: 1; }
     .footer__input-group {
       flex-basis: 100%; }
+    .footer__menu {
+      display: none; }
     .footer__title {
       font-size: 20px;
       line-height: 28px; }
