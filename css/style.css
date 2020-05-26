@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'Futura Book';
+  font-family: 'Futura BookC';
   src: url("../fonts/FuturaBookC.woff") format("woff"), url("../fonts/FuturaBookC.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
@@ -362,23 +362,39 @@ template {
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
-  padding: 0.5rem 0;
+  padding: 0.3rem 0;
   color: #fff; }
   .input.invalid {
     border-bottom: 1px solid red; }
-  .input--light::-webkit-input-placeholder {
+
+footer.invalid {
+  position: absolute;
+  color: red;
+  bottom: -15px;
+  margin: 0; }
+
+control.invalid {
+  position: absolute;
+  color: red;
+  bottom: -15px; }
+
+modal.invalid {
+  position: absolute;
+  color: red;
+  bottom: -17px; }
+  modal.invalid--light::-webkit-input-placeholder {
     opacity: 1;
     color: #fff; }
-  .input--light::-moz-placeholder {
+  modal.invalid--light::-moz-placeholder {
     opacity: 1;
     color: #fff; }
-  .input--light:-ms-input-placeholder {
+  modal.invalid--light:-ms-input-placeholder {
     opacity: 1;
     color: #fff; }
-  .input--light::-ms-input-placeholder {
+  modal.invalid--light::-ms-input-placeholder {
     opacity: 1;
     color: #fff; }
-  .input--light::placeholder {
+  modal.invalid--light::placeholder {
     opacity: 1;
     color: #fff; }
 
@@ -701,6 +717,7 @@ img {
     margin-bottom: 2rem; }
 
 .control__form {
+  position: relative;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -708,6 +725,7 @@ img {
   margin: auto; }
 
 .control__input-group {
+  position: relative;
   display: flex;
   flex-direction: column;
   flex-basis: 30%; }
@@ -739,6 +757,10 @@ img {
   height: 50px; }
 
 .control__policy {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   flex-basis: 100%;
   margin-top: 1.2rem; }
   .control__policy-label {
@@ -886,6 +908,7 @@ img {
   .footer__input {
     padding-top: 0.3rem; }
     .footer__input-group {
+      position: relative;
       display: flex;
       flex-direction: column;
       flex-basis: 44%;
@@ -894,6 +917,11 @@ img {
         flex-basis: 100%;
         margin-bottom: 2rem; }
   .footer__policy {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     flex-basis: 100%;
     margin-bottom: 3.6rem;
     margin-left: -11px; }
@@ -981,15 +1009,18 @@ img {
     margin: 0;
     margin-bottom: 2rem; }
   .modal__form {
+    position: relative;
     display: flex;
     flex-direction: column; }
   .modal__input-group {
+    position: relative;
     display: flex;
     flex-direction: column;
     margin-bottom: 3.4rem; }
   .modal__input:last-of-type {
     margin-bottom: 0.5px; }
   .modal__policy {
+    position: relative;
     margin-bottom: 2.7rem; }
   .modal__button {
     align-self: flex-end;
@@ -1239,13 +1270,20 @@ img {
       flex-direction: column; }
     .footer__info {
       order: 1; }
+    .footer__map {
+      height: 255px; }
     .footer__input-group {
       flex-basis: 100%; }
     .footer__menu {
       display: none; }
     .footer__title {
       font-size: 20px;
-      line-height: 28px; }
+      line-height: 28px;
+      margin-bottom: 46px; }
+    .footer__input {
+      padding: 0.3px; }
+    .footer__wrap {
+      padding: 0.5px; }
   .input {
     background-color: transparent;
     border: none;

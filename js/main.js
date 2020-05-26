@@ -106,8 +106,10 @@ $(document).ready(function (){
      // Валидация формы
     $('.modal__form',).validate({
         errorClass: "invalid",
+        errorElement: "modal",                      
         rules: {
           // строчное правило
+          userModal: "required",
           userName: {
               required: true,
               minlength: 2,
@@ -118,26 +120,32 @@ $(document).ready(function (){
           userEmail: {
             required: true,
             email: true
-          }
-        },  // сообщения
+          }          
+        }, 
+        
+         // сообщения
         messages: {
             userName: {
                 required: "Пожалуйста, укажите ваше имя",
                 minlength: "Имя не короче 2 символов и не больше 15",
                 maxlength: "Имя не короче 2 символов и не больше 15"
             },
-            userPhone: "Пожайлуста, укажите ваш номер телефона",
+            userPhone: "Укажите ваш номер телефона",
+            userModal: "Обязательно для отправки",
             userEmail: {
               required: "Нам нужен ваш адрес электронной почты, чтобы связаться с вами",
               email: "Ваш адрес электронной почты должен быть в формате name@mail.ru"
-            }
+            },
+            
         }
         
     });
     $('.footer__form',).validate({
         errorClass: "invalid",
+        errorElement: "footer",                   
         rules: {
           // строчное правило
+          userFooter: "required",
           userName: {
               required: true,
               minlength: 2,
@@ -159,17 +167,20 @@ $(document).ready(function (){
                 maxlength: "Имя не короче 2 символов и не больше 15"
             },
             userPhone: {
-                required: "Пожайлуста, укажите ваш номер телефона",
+                required: "Укажите ваш номер телефона",
                 minlength: "Укажите номер телефона в формате +7(000) 000-00-00"
             },
-            userQuestion: "Задайте свой вопрос"
+            userQuestion: "Задайте свой вопрос",
+            userFooter: "Обязательно для отправки",
         }
-        
+         
     });
     $('.control__form',).validate({
         errorClass: "invalid",
+        errorElement: "control",                  
         rules: {
           // строчное правило
+          userControl: "required",
           userName: {
               required: true,
               minlength: 2,
@@ -189,7 +200,7 @@ $(document).ready(function (){
                 maxlength: "Имя не короче 2 символов и не больше 15"
             },
             userPhone: "Укажите ваш номер телефона",
-            
+            userControl: "Обязательно для отправки",
         }
         
     });
