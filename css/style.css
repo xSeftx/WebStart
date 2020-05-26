@@ -347,7 +347,10 @@ template {
   color: #E3B873; }
 
 .label {
-  font-size: 1.07rem; }
+  font-family: "Futura BookC", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px; }
   .label--light {
     color: rgba(255, 255, 255, 0.5); }
 
@@ -355,7 +358,10 @@ template {
   background-color: transparent;
   border: none;
   border-bottom: 1px solid rgba(54, 54, 54, 0.3);
-  font-size: 1.285rem;
+  font-family: "Futura BookC", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
   padding: 0.5rem 0;
   color: #fff; }
   .input.invalid {
@@ -385,7 +391,7 @@ template {
 .policy__label {
   display: flex;
   align-items: center;
-  font-size: 1.142rem; }
+  font-size: 16px; }
   .policy__label--center {
     justify-content: center; }
   .policy__label::before {
@@ -698,7 +704,7 @@ img {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  max-width: 55rem;
+  max-width: 769px;
   margin: auto; }
 
 .control__input-group {
@@ -740,7 +746,8 @@ img {
 
 .video__play {
   margin: auto;
-  position: relative; }
+  position: relative;
+  cursor: pointer; }
 
 .types__section-title {
   margin-bottom: 2rem; }
@@ -859,7 +866,7 @@ img {
     background-color: #181818;
     max-width: 63.07rem;
     margin: auto;
-    margin-top: -20rem;
+    margin-top: -15rem;
     padding: 2.5rem;
     margin-bottom: 2rem; }
   .footer__title {
@@ -923,7 +930,8 @@ img {
   .footer__map {
     margin: auto;
     min-height: 465px;
-    max-width: 925px; }
+    max-width: 925px;
+    margin-bottom: 66px; }
 
 .text-phone {
   text-decoration: none;
@@ -1033,7 +1041,9 @@ img {
   .swiper-slide__text {
     margin-right: -6rem; }
     .swiper-slide__text--down {
-      margin-bottom: 0; } }
+      margin-bottom: 0; }
+  .footer__map {
+    min-height: 33rem; } }
 
 @media screen and (max-width: 760px) {
   .types__card {
@@ -1043,7 +1053,12 @@ img {
   .design__paragraph {
     font-size: 1.5rem; }
   .design__card {
-    margin-bottom: 5rem; } }
+    margin-bottom: 5rem; }
+  .text-phone {
+    display: block; }
+  .control__input-group {
+    flex-basis: 100%;
+    margin-bottom: 63px; } }
 
 @media screen and (max-width: 570px) {
   .contacts__phone {
@@ -1095,9 +1110,6 @@ img {
   .control__text {
     font-size: 1.3rem;
     margin-bottom: 26px; }
-  .control__input-group {
-    flex-basis: 100%;
-    margin-bottom: 63px; }
   .video {
     background-size: cover; }
     .video__play {
@@ -1110,7 +1122,9 @@ img {
 
 @media screen and (max-width: 515px) {
   .swiper-slide__text {
-    margin-right: -3rem; } }
+    margin-right: -3rem; }
+  .footer__map {
+    min-height: 265px; } }
 
 @media screen and (max-width: 480px) {
   .control__video {
@@ -1118,6 +1132,8 @@ img {
     min-height: 20rem; } }
 
 @media screen and (max-width: 440px) {
+  .butto:hover {
+    box-shadow: none; }
   .swiper-slide__text {
     margin-right: 0; }
   .logo__link {
@@ -1132,6 +1148,11 @@ img {
     background: #131313;
     color: #fff;
     padding: 0; }
+  .section-title__word::after {
+    display: none; }
+  .section.design {
+    background: #131313;
+    color: #fff; }
   .hero {
     margin-top: -2px;
     margin-left: -13px;
@@ -1149,13 +1170,14 @@ img {
       margin-bottom: 26px;
       max-width: 338px;
       width: 100%;
-      margin-right: -10px; }
+      margin-left: 18px; }
       .hero__button--outline {
         font-weight: 400;
         font-size: 13px;
         line-height: 15px; }
     .hero__content {
-      max-width: 100%; }
+      max-width: 100%;
+      min-height: 100%; }
   .control__text {
     font-size: 14px;
     line-height: 24px; }
@@ -1173,8 +1195,6 @@ img {
     margin-top: -2.9rem;
     margin-bottom: 5.6rem; }
   .control__input {
-    font-size: 18px;
-    line-height: 25px;
     padding-top: 2px; }
     .control__input::-webkit-input-placeholder {
       color: #fff; }
@@ -1194,8 +1214,6 @@ img {
     width: 100%;
     margin-bottom: -20px; }
   .label {
-    font-size: 15px;
-    line-height: 20px;
     color: rgba(255, 255, 255, 0.5); }
   .projects {
     padding-top: 18px;
@@ -1213,4 +1231,24 @@ img {
     margin-top: 3rem;
     max-height: 30rem; }
   .swiper-wrapper-image {
-    height: 202px; } }
+    height: 202px; }
+  .footer {
+    display: flex;
+    flex-direction: column; }
+    .footer__wrap {
+      order: 0;
+      padding: 0; }
+    .footer__map {
+      display: flex;
+      order: 1; }
+    .footer__info {
+      order: 5; }
+    .footer__input-group {
+      flex-basis: 100%; }
+    .footer__title {
+      font-size: 20px;
+      line-height: 28px; }
+  .input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #fff; } }
