@@ -171,7 +171,7 @@ $(document).ready(function (){
           },
           userPhone: {
               required: true,
-              minlength: 16,
+              minlength: 18,
           },
           // правило-объект
           userQuestion: "required" 
@@ -213,7 +213,7 @@ $(document).ready(function (){
           },
           userPhone: {
             required: true,
-            minlength: 20,
+            minlength: 18,
           },
           userEmail: {
             required: true,
