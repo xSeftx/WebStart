@@ -106,7 +106,7 @@ $(document).ready(function (){
      // Валидация формы
      $('.modal__form',).validate({
         errorClass: "invalid",
-        errorElement: "footer",
+        errorElement: "modal",
         errorPlacement: function(even, types) {
             if ("checkbox" == types.attr("type")) {
                 return types.next("label").append(even);
