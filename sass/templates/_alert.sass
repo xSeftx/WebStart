@@ -1,0 +1,43 @@
+.alert 
+	z-index: 4
+	position: fixed
+	width: 100%
+	height: 100vh
+	top: 0
+	left: 0
+	background-color: rgba(0, 0, 0, .5)
+	display: none
+
+
+.popup 
+	position: absolute
+	width: 509px
+	height: 350px
+	display: flex
+	justify-content: center
+	align-items: center
+	left: 50%
+	top: 50%
+	transform: translate(-50%, -50%)
+	padding: 40px
+	background: $dark
+	font-family: 'Yeseva One', cursive
+	font-weight: 500	
+	color: $primary
+    font-size: 24px
+.popup_title
+    font-size: 24px
+    text-align: center
+
+.close-popup 
+	position: absolute
+	top: 15px
+	right: 15px
+	width: 28px
+	height: 28px
+	cursor: pointer
+	background: transparent url('../img/close.svg') no-repeat center    
+.close-alert
+       border: none 
+
+

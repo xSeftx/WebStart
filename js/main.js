@@ -106,7 +106,7 @@ $(document).ready(function (){
      // Валидация формы
      $('.modal__form',).validate({
         errorClass: "invalid",
-        errorElement: "footer",
+        errorElement: "modal",
         errorPlacement: function(even, types) {
             if ("checkbox" == types.attr("type")) {
                 return types.next("label").append(even);
@@ -147,10 +147,39 @@ $(document).ready(function (){
             userEmail: {
                 required: "Укажите ваш email",
                 email: "Введите в формате - name@mail.ru"
-            },
-        }
+            }
+        },
+        submitHandler: function(form) {
+            $.ajax({
+                type: "POST",
+                url: "send.php",
+                data: $(form). serialize(),                
+                success: function (response) {
+                    console.log('Ajax сработал. Ответ сервера: ' + response);                    
+                    $(form)[0].reset();                    
+                    modal.removeClass('modal--visible');
+                    $('.alert-overlay').fadeIn();
+                    $(this).find('input').val('');
+                },
+                error: function (response) {
+                    console.error('Ошибка запроса ' + response);
+                }
+            });
+        }        
+        
          
     });
+    $('.close-alert').click(function() { 
+        $('.alert-overlay').fadeOut();
+      });
+      
+      $(document).mouseup(function (e) { 
+          var popup = $('.popup');
+          if (e.target!=popup[0]&&popup.has(e.target).length === 0){
+              $('.alert-overlay').fadeOut();
+          }
+      });
+
     $('.footer__form',).validate({
         errorClass: "invalid",
         errorElement: "footer",
@@ -171,7 +200,7 @@ $(document).ready(function (){
           },
           userPhone: {
               required: true,
-              minlength: 16,
+              minlength: 18,
           },
           // правило-объект
           userQuestion: "required" 
@@ -190,9 +219,37 @@ $(document).ready(function (){
             },
             userQuestion: "Задайте свой вопрос",
             userFooter: "Обязательно для отправки",
-        }
+        },
+        submitHandler: function(form) {
+            $.ajax({
+                type: "POST",
+                url: "send.php",
+                data: $(form). serialize(),                
+                success: function (response) {
+                    console.log('Ajax сработал. Ответ сервера: ' + response);                    
+                    $(form)[0].reset();
+                    modal.removeClass('modal--visible');
+                    $('.alert-overlay').fadeIn();
+                    $(this).find('input').val('');
+                },
+                error: function (response) {
+                    console.error('Ошибка запроса ' + response);
+                }
+            });
+        }        
+        
          
     });
+    $('.close-alert').click(function() { 
+        $('.alert-overlay').fadeOut();
+      });
+      
+      $(document).mouseup(function (e) { 
+          var popup = $('.popup');
+          if (e.target!=popup[0]&&popup.has(e.target).length === 0){
+              $('.alert-overlay').fadeOut();
+          }
+      });
     $('.control__form',).validate({
         errorClass: "invalid",
         errorElement: "control",
@@ -213,7 +270,7 @@ $(document).ready(function (){
           },
           userPhone: {
             required: true,
-            minlength: 20,
+            minlength: 18,
           },
           userEmail: {
             required: true,
@@ -231,9 +288,37 @@ $(document).ready(function (){
                 minlength: "Укажите верный номер"
             },
             userControl: "Обязательно для отправки",
-        }
+        },
+        submitHandler: function(form) {
+            $.ajax({
+                type: "POST",
+                url: "send.php",
+                data: $(form). serialize(),                
+                success: function (response) {
+                    console.log('Ajax сработал. Ответ сервера: ' + response);                    
+                    $(form)[0].reset();
+                    modal.removeClass('modal--visible');
+                    $('.alert-overlay').fadeIn();
+                    $(this).find('input').val('');
+                },
+                error: function (response) {
+                    console.error('Ошибка запроса ' + response);
+                }
+            });
+        }        
         
+         
     });
+    $('.close-alert').click(function() { 
+        $('.alert-overlay').fadeOut();
+      });
+      
+      $(document).mouseup(function (e) { 
+          var popup = $('.popup');
+          if (e.target!=popup[0]&&popup.has(e.target).length === 0){
+              $('.alert-overlay').fadeOut();
+          }
+      });
 
     ///маска для телефона
 
