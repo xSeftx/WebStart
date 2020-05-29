@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: 'Futura BookC';
   src: url("../fonts/FuturaBookC.woff") format("woff"), url("../fonts/FuturaBookC.woff2") format("woff2");
@@ -417,6 +418,7 @@ modal.invalid {
   position: absolute;
   color: red;
   bottom: -20px;
+  font-size: 0.9rem;
   left: 0;
   font-size: 0.85rem; }
 
@@ -639,7 +641,7 @@ img {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background: #131313 url("../img/hero-bg.jpg") no-repeat center/cover;
+  background: #131313 url("../img/hero-bg.webp") no-repeat center/cover;
   height: 100vh;
   color: #fff; }
   .hero::before {
@@ -781,7 +783,7 @@ img {
   margin-bottom: 4.428rem;
   max-width: 58.357rem;
   min-height: 31rem;
-  background: #131313 url("../img/video-mask.jpg") no-repeat center;
+  background: #131313 url("../img/video-mask.webp") no-repeat center;
   -webkit-box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.15);
   box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.15); }
   .control__video::before {
@@ -999,7 +1001,7 @@ img {
   margin-right: 1rem; }
 
 .footer {
-  background: #131313 url("../img/footer-bg.jpg") no-repeat center/cover;
+  background: #131313 url("../img/footer-bg.webp") no-repeat center/cover;
   padding-top: 3rem; }
   .footer__wrap {
     background: #131313 url("../img/bgLine.svg") no-repeat center;
@@ -1145,7 +1147,7 @@ img {
   .modal__dialog {
     position: relative;
     max-width: 36.36rem;
-    background: #131313 url("../img/bg-line.svg") no-repeat center;
+    background: #131313 url("../img/bgLine.svg") no-repeat center;
     padding: 2.357rem 3.5rem 1.928rem;
     color: #fff; }
   .modal__close {
@@ -1197,14 +1199,12 @@ img {
     width: 15.2rem; }
 
 .alert {
-  z-index: 4;
   position: fixed;
   width: 100%;
   height: 100vh;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: none; }
+  background-color: rgba(0, 0, 0, 0.5); }
 
 .popup {
   position: absolute;
@@ -1245,6 +1245,92 @@ img {
 
 .close-alert {
   border: none; }
+
+.ymap-container {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  background: url("../img/yandex-map.webp") no-repeat;
+  background-position: center center;
+  background-size: cover;
+  -webkit-box-shadow: 0 0 2em 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 2em 0 rgba(0, 0, 0, 0.2); }
+
+/* Блок, в котором появится Яндекс.Карта */
+#map-yandex {
+  position: relative;
+  z-index: 7;
+  width: 100%;
+  cursor: pointer;
+  background-color: transparent; }
+
+/* Индикатор загрузки, который показывается до загрузки карты */
+.loader {
+  position: absolute;
+  z-index: 15;
+  top: -100%;
+  left: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  color: #000000;
+  -webkit-transition: opacity .7s ease;
+  -o-transition: opacity .7s ease;
+  transition: opacity .7s ease;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.55); }
+
+.loader:after,
+.loader:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.loader.is-active {
+  top: 0;
+  opacity: 1; }
+
+.loader-default:after {
+  position: absolute;
+  top: calc(50% - 24px);
+  left: calc(50% - 24px);
+  width: 48px;
+  height: 48px;
+  content: '';
+  -webkit-animation: rotation 1s linear infinite;
+  animation: rotation 1s linear infinite;
+  border: solid 8px #ffffff;
+  border-left-color: transparent;
+  border-radius: 50%; }
+
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  to {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg); } }
+
+@keyframes rotation {
+  from {
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  to {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg); } }
+
+@-webkit-keyframes blink {
+  from {
+    opacity: .5; }
+  to {
+    opacity: 1; } }
+
+@keyframes blink {
+  from {
+    opacity: .5; }
+  to {
+    opacity: 1; } }
 
 @media screen and (max-width: 1370px) {
   .logo__link {
@@ -1337,6 +1423,13 @@ img {
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     margin-bottom: 63px; } }
+
+@media screen and (max-width: 590px) {
+  .popup {
+    max-width: 400px;
+    height: 200px; }
+  .popup_title {
+    font-size: 18px; } }
 
 @media screen and (max-width: 570px) {
   .contacts__phone {
@@ -1486,7 +1579,8 @@ img {
     margin-top: -2.9rem;
     margin-bottom: 5.6rem; }
   .control__input {
-    padding-top: 2px; }
+    padding-top: 2px;
+    color: #fff; }
     .control__input::-webkit-input-placeholder {
       color: #fff; }
     .control__input::-moz-placeholder {
@@ -1579,4 +1673,9 @@ img {
   .input {
     background-color: transparent;
     border: none;
-    border-bottom: 1px solid #fff; } }
+    border-bottom: 1px solid #fff; }
+  .popup {
+    width: 25rem;
+    padding: 0; }
+  .popup_title {
+    font-size: 1.5rem; } }

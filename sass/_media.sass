@@ -104,8 +104,12 @@
         &__input-group
             flex-basis: 100%
             margin-bottom: 63px        
-        
-       
+@media screen and ( max-width: 590px ) 
+    .popup
+        max-width: 400px
+        height: 200px
+    .popup_title
+        font-size: 18px   
 
 @media screen and ( max-width: 570px )    
     .contacts
@@ -265,6 +269,7 @@
             margin-bottom: 5.6rem
         &__input            
             padding-top: 2px
+            color: $light
             &::placeholder
                 color: $light 
             &-group
@@ -342,7 +347,11 @@
         background-color: transparent
         border: none
         border-bottom: 1px solid $light
-             
+    .popup
+        width: 25rem
+        padding: 0
+    .popup_title
+        font-size: 1.5rem            
                
     
         
