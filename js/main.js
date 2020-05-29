@@ -1,30 +1,3 @@
-// document.addEventListener("DOMContentLoaded", function(event) {
-//     const modal = document.querySelector('.modal');
-//     const modalBtn = document.querySelectorAll('[data-toggle=modal]');
-//     const closeBtn = document.querySelector('.modal__close');
-//     const switchModal = () => {
-//         modal.classList.toggle('modal--visible');
-//     }
-//     modalBtn.forEach(element => {
-//         element.addEventListener('click', switchModal);         
-       
-//     });
-//     closeBtn.addEventListener('click', switchModal);
-
-//     document.ddEventListener('click', function(e) {
-//         if(e.target == modal) {
-//             modal.classList.toggle('modal--visible')
-//         }
-//     })
-//     document.addEventListener('keyup', function(e) {
-//         if(e.keyCode === 27) {
-//             modal.classList.toggle('modal--visible')
-//         }
-//     })
-    
-    
-// });
-
 
 $(document).ready(function (){
    var modal = $('.modal'),
@@ -41,16 +14,13 @@ $(document).ready(function (){
         if(e.target == this) {
             modal.toggleClass('modal--visible')
         }
-    })
-    
+    })  
     	
     $(document).on('keyup', function(e) {
         if(e.keyCode === 27) {
             modal.removeClass('modal--visible')
         }
-    })
-   
-    
+    })    
 
     $(function(){
         $(window).scroll(function(){
