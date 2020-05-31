@@ -327,6 +327,7 @@ function init () {
             // её "ножки" (точки привязки).
             iconImageOffset: [-25, -50],
         });
+        myMapTemp.behaviors.disable('scrollZoom');
         myMapTemp.geoObjects.add(myPlacemarkTemp); // помещаем флажок на карту
         
   // Получаем первый экземпляр коллекции слоев, потом первый слой коллекции
@@ -438,6 +439,23 @@ $(function() {
     function videoPlay(event) {
         event.target.playVideo();
     }
-    
-
+    $(function(){
+        $('a[href^="#"]').on('click', function(event) {
+          // отменяем стандартное действие
+          event.preventDefault();
+          
+          var sc = $(this).attr("href"),
+              dn = $(sc).offset().top -100;
+          /*
+          * sc - в переменную заносим информацию о том, к какому блоку надо перейти
+          * dn - определяем положение блока на странице
+          */
+          
+          $('html, body').animate({scrollTop: dn}, 1000);
+          
+          /*
+          * 1000 скорость перехода в миллисекундах
+          */
+        });
+      });
 

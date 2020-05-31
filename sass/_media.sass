@@ -33,17 +33,30 @@
         &__item
             margin-right: 1rem
 @media screen and ( max-width: 1100px )
+    .phone
+        margin-right: 25px
     .swiper-slide
         &__text
             margin-right: 0
 @media screen and ( max-width: 992px )
+    .mail-img
+        &:hover
+            border-radius: 50%
+            box-shadow: none
+    .instagram-img
+        &:hover
+            border-radius: 50%
+            box-shadow: none
     .phone
         &:hover
             border-bottom: 1px solid  $primary
+            box-shadow: none
+            color: $primary
     .logo
         &__link
             &:hover
                 box-shadow: none
+                color: $primary
     .nav
         display: none
     .hero
@@ -51,6 +64,11 @@
             display: none
         &__content
             margin-left: 0 
+        &__button
+            color: $light
+        &__scroll-down             
+            &:hover                
+                font-size: 12px
     .card
         &__title
             font-size: 1rem
@@ -62,10 +80,15 @@
     .button
         &:hover
             box-shadow: none 
+            color: $light
         &--primary
             &:hover
-                box-shadow: 0px 5px 15px rgba($primary, 0.2) 
-    
+                box-shadow: 0px 5px 15px rgba($primary, 0.2)
+                color: $light 
+    .text-phone
+        &:hover
+            color: $primary
+            border-bottom: none
 @media screen and ( max-width: 810px )
     .row
         flex-direction: column
@@ -82,11 +105,18 @@
     .footer
         &__map
             min-height: 33rem 
-                    
+    .card
+        &__text
+            margin-bottom: 40px                
                 
                 
 @media screen and ( max-width: 760px )
-    
+    .section
+        &.controle
+            display: flex
+            flex-direction: column
+            background: $dark            
+            padding-bottom: 60px 
     .types
         &__card
             margin-bottom: 5rem 
@@ -100,17 +130,58 @@
             margin-bottom: 5rem 
     &.text-phone
             display: block
-    .control
+    .control  
+              
+        &__text
+            font-size: 14px
+            line-height: 24px
+            color: $light             
+            &::before
+                margin-bottom: 1.4rem  
+        &__label
+            color: rgba(255, 255, 255, 0.5) 
+            
+        &__video
+            margin-top: 40px
+            margin-bottom: 2.2rem
+            max-width: 500px
+            min-height: 300px
+        &-title
+            font-size: 22px
+            margin-bottom: 1.5rem
+        &__policy
+            margin-top: -2.9rem
+            margin-bottom: 9rem
+            &-label
+                color: $light
+                margin-bottom: 20px
+        &__input            
+            padding-top: 2px
+            color: $light
+            &::placeholder
+                color: $light 
+            &-group
+                margin-bottom: 5.1rem 
+        &__button                     
+            position: relative
+            max-width: 340
+            width: 100%    
+            margin-top: 50px                
+            margin-bottom: -60rem      
         &__input-group
             flex-basis: 100%
             margin-bottom: 63px        
 @media screen and ( max-width: 590px ) 
+    .logo
+        &__link
+            margin-right: 25px
     .popup
         max-width: 400px
         height: 200px
     .popup_title
         font-size: 18px   
-
+    .hero__scroll
+        display: none
 @media screen and ( max-width: 570px )    
     .contacts
         &__phone
@@ -153,6 +224,7 @@
     .control
         &__button
             order: 2
+            margin-top: -10px
         &__policy
             display: flex
             margin-left: -13px
@@ -192,7 +264,7 @@
         &__video
             max-width: 35rem
             min-height: 20rem       
-    
+
 @media screen and ( max-width: 440px )
              
     .swiper-slide
@@ -208,12 +280,12 @@
             flex-wrap: nowrap
             font-size: 12px               
             margin-right: -5px
-    .section
+    .section  
         &.controle
-            background: $dark
-            color: $light  
-            padding: 0  
+            
+            padding: 0                 
         &-title
+            padding-top: 52px
             &__word
                 &::after
                     display: none
@@ -221,7 +293,8 @@
             background: $dark
             color: $light 
             padding-bottom: 0            
-                                      
+    .design__paragraph
+            color: $light                              
     .hero                      
         margin-top: -2px
         margin-left: -13px
@@ -254,13 +327,20 @@
         &__text
             font-size: 14px
             line-height: 24px
+            color: $light 
             &::before
-                margin-bottom: 1.4rem   
+                margin-bottom: 1.4rem 
+          
         &__video
             margin-top: 40px
             margin-bottom: 2.2rem
             max-width: 340px
-            min-height: 207px
+            min-height: 207px           
+    .video
+        &__play      
+            &:hover
+                width: 56px
+                height: 56px
         &-title
             font-size: 22px
             margin-bottom: 1.5rem
@@ -321,26 +401,40 @@
             height: 255px 
             margin-bottom: 41px 
             width: 100%          
-        &__input-group            
-            flex-basis: 100%
+        &__input
+            &-group            
+                flex-basis: 100%
+                margin-bottom: 62px          
+        &-mail
+            width: 39px
+            height: 39px
+            margin-right: 15px
         &__menu
             display: none   
         &__title
             font-size: 20px
             line-height: 28px
-            margin-bottom: 46px            
+            margin-bottom: 48px            
         &__input
-            padding: 0.3px
+            padding: 0
+            padding-bottom: 2px
         &__policy
-            margin-bottom: 47px
+            margin-top: -53px
+            margin-bottom: 64px
+            margin-left: -40px
         &__form
             margin-bottom: 46px
         &__text
             margin: 0
             margin-bottom: 26px
+            font-size: 18px
+            line-height: 25px
         &__wrap
-            margin: 0
+            margin: 0 -12px
             padding: 0.5px
+            flex-basis: 100%
+            background: $dark
+        
         &__button
             flex-basis: 100%
     .input
@@ -351,10 +445,65 @@
         width: 25rem
         padding: 0
     .popup_title
-        font-size: 1.5rem            
-               
-    
-        
+        font-size: 1.5rem 
+@media screen and ( max-height: 555px) 
+    .hero__scroll 
+        display: none 
+    .hero
+        &::after
+            display: none                 
+@media screen and ( max-height: 490px)  
+    .modal
+        &__form
+            display: flex
+            flex-direction: space-between
+            flex-wrap: wrap
+            flex-direction: row
+        &__dialog                
+            position: relative
+            max-width: 36.35rem
+            max-height: 36.143rem
+            background: #131313 url(../img/bgLine.svg) no-repeat center
+            padding: 2.357rem 3.5rem 1.928rem
+            color: #fff
+            
+
+        &__title            
+            font-family: "Yeseva One",cursive
+            font-weight: 400
+            font-size: 1.357rem
+            text-align: center            
+            margin-bottom: 2.428rem            
+            text-align: center
+            margin: 0
+            line-height: 1.15rem
+        &__input
+            font-size: 1.285rem            
+            &-group
+                display: flex
+                flex-direction: column
+                flex-basis: 45%
+                margin-bottom: 1.3rem
+                margin-right: 10px
+                
+        &__button
+            display: flex
+            width: 15.214rem        
+            height: 3.643rem
+            align-items: center
+            justify-content: center 
+            font-size: 0.94rem 
+    modal.invalid
+        bottom: -15px          
+    .label
+        font-size: 1.07rem
+        margin-top: 17px
+        margin-bottom: -10px
+    .policy__label
+        font-size: 1.142rem  
+        margin-bottom: 5px
+        &.invalid    
+            bottom: -15px
     
     
     
